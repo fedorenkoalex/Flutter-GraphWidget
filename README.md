@@ -1,8 +1,9 @@
 
 # Flutter GraphWidget
 
-![Screenshot 1](raw/imgs/pic1.jpg)
-![Screenshot 2](raw/imgs/pic2.jpg)
+
+<img src="https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic1.jpg" width="250">
+<img src="https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic2.jpg" width="250">
 
 #### 1. Installing
  - copy [Widget](widget/) folder to Your project.
