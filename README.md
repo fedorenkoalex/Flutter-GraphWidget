@@ -1,14 +1,16 @@
 
 # Flutter GraphWidget
 
+#### Installing 
 
-<img src="https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic1.jpg" width="250">
-<img src="https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic2.jpg" width="250">
+For installing tips see [Installing section](https://pub.dartlang.org/packages/graph_widget#-installing-tab-)
 
-#### 1. Installing
- - copy [Widget](https://github.com/fedorenkoalex/Flutter-GraphWidget/tree/master/widget) folder to Your project.
- - use =)
- - demo app avaliable [HERE](https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/app-release.apk)
+
+#### 1. Links
+ - Graph Widget on [Flutter Pub](https://pub.dartlang.org/packages/graph_widget)
+ - [Screenshot 1](https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic1.jpg)
+ - [Screenshot 2](https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/imgs/pic2.jpg)
+ - demo app available [HERE](https://github.com/fedorenkoalex/Flutter-GraphWidget/blob/master/raw/app-release.apk)
 #### 2. Usage
  - Setup variables and GraphParams. Here you can setup your Graph.(For details look at 3. Graph Params) 
 For example:
