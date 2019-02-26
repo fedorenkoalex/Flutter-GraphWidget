@@ -55,79 +55,80 @@ For example:
  ```
  *Note: position is index in list*
 #### 3. Graph Params
- - *Points of Graph. Array of [GraphPoint(x: value, y: value)]*
+ - Points of Graph. Array of [GraphPoint(x: value, y: value)]<br/>
 ```List<GraphPoint> graphPoints```
- - *Left (X) widget offset.
-Default is 0.0.*
+ - Left (X) widget offset.
+Default is 0.0.<br/>
 ```double left```
- - *Top (Y) widget offset.
-Default is 0.0.*
+ - Top (Y) widget offset.
+Default is 0.0.<br/>
 ```double top```
- - *Additional free area for scrolling before Graph.
-Default is 0.0.*
+ - Additional free area for scrolling before Graph.
+Default is 0.0.<br/>
 ```double startOverScroll```
- - *Additional free area for scrolling after Graph.
-Default is 0.0.*
+ - Additional free area for scrolling after Graph.
+Default is 0.0.<br/>
 ```double endOverScroll```
- - *Count of grid lines at Y coordinate.
-Default is 10.*
+ - Count of grid lines at Y coordinate.<br/>
+Default is 10.
 ```int yGridSize```
- - *Duration of scroll animation
-in milliseconds*
+ - Duration of scroll animation<br/>
+in milliseconds
 ```int scrollDuration```
- - *Points radius [double]*
+ - Points radius [double]<br/>
 ```double pointRadius```
- - *Max point at screen at X coordinate
+ - Max point at screen at X coordinate
 Using only when scrolling is enabled;
-To use Y scale size depending on Graph max value - use GraphConst.AUTO.*
+To use Y scale size depending on Graph max value - use GraphConst.AUTO.<br/>
 ```int yScale```
- - *Max point of Y coordinate*
+ - Max point of Y coordinate<br/>
 ```int xScale```
- - *Show markings every X value
+ - Show markings every X value
 For example:
 showMarkingsEveryX = 5; ,markings = 5,10,15 etc
-to enable all markings set showMarkingsEveryX to 0.*
+to enable all markings set showMarkingsEveryX to 0.<br/>
 ```int showMarkingsEveryX```
- - *Enable or disable rounding Graph corners.
-Disabled by default.*
+ - Enable or disable rounding Graph corners.
+Disabled by default.<br/>
 ```bool enableRoundCorners```
- - *Enable or disable fill Graph with paint or Gradient.
-Disabled by default.*
+ - Enable or disable fill Graph with paint or Gradient.
+Disabled by default.<br/>
 ```bool enableFill```
- - *Enable or disable text markings at the bottom of Graph.
-Disabled by default.*
+ - Enable or disable text markings at the bottom of Graph.
+Disabled by default.<br/>
 ```bool enableMarks```
- - *Enable or disable grid.
-Disabled by default.*
+ - Enable or disable grid.
+Disabled by default.<br/>
 ```bool enableGrid```
- - *Enable or disable scrolling.
-Disabled by default.*
+ - Enable or disable scrolling.
+Disabled by default.<br/>
 ```bool enableScroll```
- - *Enable or disable scroll fling.
-Disabled by default.*
+ - Enable or disable scroll fling.
+Disabled by default.<br/>
 ```bool enableFling```
- - *Enable or disable points.
-Disabled by default.*
+ - Enable or disable points.
+Disabled by default.<br/>
 ```bool enablePoints```
- - *Widget height.
-To use screen height use GraphConst.WRAP.*
+ - Widget height.
+To use screen height use GraphConst.WRAP.<br/>
 ```double height```
- - *Widget width.
-To use screen width use GraphConst.WRAP.*
+ - Widget width.
+To use screen width use GraphConst.WRAP.<br/>
 ```double width```
- - *Paint of Graph.*
+ - Paint of Graph.<br/>
 ```Paint mainLinePaint```
- - *Gradient of Graph paint .*
+ - Gradient of Graph paint.<br/>
 ```Gradient gradient```
- - *Paint of Grid.*
+ - Paint of Grid.<br/>
 ```Paint gridPaint```
- - *Paint of Point at Graph.*
+ - Paint of Point at Graph.<br/>
 ```Paint pointsPaint```
- - *Paint of background.*
+ - Paint of background.<br/>
 ```Paint bgdPaint```
- - *Paint of Markings background.*
+ - Paint of Markings background.<br/>
 ```Paint marksBgdPaint```
- - *Markings text style UI.TextStyle.*
+ - Markings text style UI.TextStyle.<br/>
 ```UI.TextStyle textStyle```
  
 
+ 
