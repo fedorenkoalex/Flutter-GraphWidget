@@ -237,9 +237,9 @@ class GraphWidgetInternalState extends State<_GraphWidgetInternal>
 
   @override
   void dispose() {
-    _controllerLeft ?? _controllerLeft.dispose();
-    _controllerRight ?? _controllerRight.dispose();
-    _controllerMove ?? _controllerMove.dispose();
+    _controllerLeft?.dispose();
+    _controllerRight?.dispose();
+    _controllerMove?.dispose();
     super.dispose();
   }
 
@@ -371,12 +371,12 @@ class _GraphWidgetPainter extends CustomPainter {
   final GraphWidgetBloc bloc;
 
   _GraphWidgetPainter({@required this.params, @required this.bloc}) {
-    params.mainLinePaint = params.mainLinePaint ?? _initDefMainLinePaint();
-    params.gridPaint = params.gridPaint ?? _initDefGridLinePaint();
-    params.pointsPaint = params.pointsPaint ?? _initDefPointPaint();
-    params.bgdPaint = params.bgdPaint ?? _initDefBgdPaint();
-    params.marksBgdPaint = params.marksBgdPaint ?? _initDefMarkingBgdPaint();
-    params.textStyle = params.textStyle ?? _initDefMarkingsTextStyle();
+    params.mainLinePaint ??= _initDefMainLinePaint();
+    params.gridPaint ??= _initDefGridLinePaint();
+    params.pointsPaint ??= _initDefPointPaint();
+    params.bgdPaint ??= _initDefBgdPaint();
+    params.marksBgdPaint ??= _initDefMarkingBgdPaint();
+    params.textStyle ??= _initDefMarkingsTextStyle();
   }
 
   Paint _initDefMainLinePaint() {
@@ -429,8 +429,8 @@ class _GraphWidgetPainter extends CustomPainter {
     params.mainLinePaint.style =
         params.enableFill ? PaintingStyle.fill : PaintingStyle.stroke;
     params.mainLinePaint.shader = (params.gradient != null)
-        ? params.gradient.createShader(
-            Rect.fromLTRB(params.left, params.top, params.width, bloc.getHeightForGraph()))
+        ? params.gradient.createShader(Rect.fromLTRB(
+            params.left, params.top, params.width, bloc.getHeightForGraph()))
         : null;
   }
 
@@ -489,7 +489,8 @@ class _GraphWidgetPainter extends CustomPainter {
         canvas.drawCircle(pointCenter, params.pointRadius, params.pointsPaint);
       }
       if (params.enableMarks && pointsOnScreen[i].isOnScreen) {
-        if (params.showMarkingsEveryX == 0 || i % params.showMarkingsEveryX == 0){
+        if (params.showMarkingsEveryX == 0 ||
+            i % params.showMarkingsEveryX == 0) {
           UI.ParagraphBuilder builder = UI.ParagraphBuilder(
               UI.ParagraphStyle(textDirection: UI.TextDirection.ltr))
             ..pushStyle(params.textStyle)
@@ -498,9 +499,10 @@ class _GraphWidgetPainter extends CustomPainter {
           UI.Paragraph paragraph = builder.build()
             ..layout(UI.ParagraphConstraints(width: bloc.getTextWidth()));
 
-          double textY = (((bloc.getHeightWithTop()) - bloc.getUnderTitleTop()) -
-              paragraph.height) /
-              2;
+          double textY =
+              (((bloc.getHeightWithTop()) - bloc.getUnderTitleTop()) -
+                      paragraph.height) /
+                  2;
 
           canvas.drawParagraph(paragraph,
               Offset(pointsOnScreen[i].x, bloc.getUnderTitleTop() + textY));
