@@ -1,7 +1,7 @@
-import 'package:flutter_canv/widget/BlocBase.dart';
+import 'BlocBase.dart';
 import 'dart:async';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_canv/widget/GraphWidget.dart';
+import 'GraphWidget.dart';
 
 class GraphWidgetBloc implements BlocBase {
   StreamController<GraphParams> _paramsProvideController =
@@ -14,7 +14,9 @@ class GraphWidgetBloc implements BlocBase {
   final GraphParams params;
   final BuildContext context;
 
-  GraphWidgetBloc({this.context, this.params}) {
+  GraphWidgetBloc({this.context, this.params});
+
+  void init() {
     initSizes();
     if (params.yScale == GraphConst.AUTO) {
       params.yScale = _findMaxValue();

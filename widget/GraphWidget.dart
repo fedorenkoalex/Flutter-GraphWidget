@@ -232,7 +232,6 @@ class GraphWidgetInternalState extends State<_GraphWidgetInternal>
   @override
   void initState() {
     super.initState();
-    _bloc = BlocProvider.of<GraphWidgetBloc>(context);
   }
 
   @override
@@ -245,6 +244,8 @@ class GraphWidgetInternalState extends State<_GraphWidgetInternal>
 
   @override
   Widget build(BuildContext context) {
+    _bloc = BlocProvider.of<GraphWidgetBloc>(context);
+    _bloc.init();
     return GestureDetector(
       onHorizontalDragEnd: (details) {
         if (!_bloc.isFlingEnabled()) {
@@ -294,7 +295,7 @@ class GraphWidgetInternalState extends State<_GraphWidgetInternal>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _bloc ?? _bloc.initSizes();
+    if (_bloc != null) _bloc.initSizes();
   }
 
   _initAnimationsForRight(DragEndDetails details) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_canv/widget/BlocBase.dart';
+import 'BlocBase.dart';
 
 class BlocProvider<T extends BlocBase> extends StatefulWidget {
   final T bloc;
